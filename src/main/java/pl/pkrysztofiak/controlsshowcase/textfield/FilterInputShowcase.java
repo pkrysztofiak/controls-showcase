@@ -18,7 +18,7 @@ public class FilterInputShowcase extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         UnaryOperator<TextFormatter.Change> filter = change -> {
-            String text = change.getText();
+            String text = change.getControlNewText();
 
             if (text.matches("[-\\d]*")) {
                 return change;
